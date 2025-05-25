@@ -5,10 +5,7 @@ set -e
 npm run build
 
 # 进入生成的文件夹
-cd ./public
-
-# 发布到自定义域名
-# echo 'www.yourwebsite.com' > CNAME
+cd ./.vuepress/dist
 
 # Git
 git init

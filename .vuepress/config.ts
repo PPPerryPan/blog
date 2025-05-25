@@ -4,6 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
+  base: '/perry_blog/', // 仓库名称，注意以斜杠开头和结尾
   title: "P-Lab",
   description: "boom!",
   bundler: viteBundler(),
