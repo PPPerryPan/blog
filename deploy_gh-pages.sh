@@ -7,12 +7,17 @@ npm run build
 # 进入生成的文件夹
 cd ./.vuepress/dist
 
-# Git
-git init
-git add -A
-git commit -m 'deploy'
+# 检查是否已经是一个 Git 仓库
+if [ ! -d ".git" ]; then
+  git init
+  git remote add origin git@github.com:PPPerryPan/blog.git
+fi
 
-# 发布到GitHub
-git push -f git@github.com:PPPerryPan/perry_blog.git master:gh-pages
+# 更新内容
+git add -A
+git commit -m 'deploy' || echo "No changes to commit"
+
+# 推送到 GitHub
+git push -f origin master:gh-pages
 
 cd -

@@ -4,7 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
-  base: '/perry_blog/', // 仓库名称，注意以斜杠开头和结尾
+  base: '/blog/', // 仓库名称，注意以斜杠开头和结尾
   title: "P-Lab",
   description: "boom!",
   bundler: viteBundler(),
@@ -12,7 +12,7 @@ export default defineUserConfig({
   
   // 在这里添加head配置
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico?v=2' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     // 如果你想要更完整的favicon配置，可以添加以下内容
     // ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
     // ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
