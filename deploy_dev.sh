@@ -2,7 +2,7 @@
 set -e
 
 # Git
-git init
+# git init
 git add .gitignore
 git add -A
 git commit -m 'deploy_dev'
