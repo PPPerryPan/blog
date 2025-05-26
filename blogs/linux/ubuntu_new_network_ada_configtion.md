@@ -2,9 +2,9 @@
 title: Ubuntu 22.04+ 新增网卡配置
 date: 2025-02-10
 tags:
- - DNS
+ - network
 categories:
- - 网络
+ - linux
 ---
 
 # Ubuntu 22.04+ 新增网卡配置
