@@ -93,7 +93,7 @@ Hint: Some lines were ellipsized, use -l to show in full.
 virsh list
 ```
 
-![CentOS 7 64 位-2022-04-18-15-55-49](./Lab2_Virtual.assets/CentOS 7 64 位-2022-04-18-15-55-49.png)
+![CentOS 7 64 位-2022-04-18-15-55-49](./Lab2_Virtual.assets/2022-04-18-15-55-49.png)
 
 
 
@@ -143,7 +143,7 @@ vncserver
 
 ## 以上 · 可能会遇到的问题
 
-![CentOS 7 64 位-2022-04-18-09-06-58](./Lab2_Virtual.assets/CentOS 7 64 位-2022-04-18-09-06-58.png)
+![CentOS 7 64 位-2022-04-18-09-06-58](./Lab2_Virtual.assets/2022-04-18-09-06-58.png)
 
 - 解决方案：检查网络连接状态，代理服务器状态。
 
@@ -204,7 +204,7 @@ sudo apt-get install openssh-server
 
 - virsh list -all 为空问题
 
-![CentOS 7 64 位-2022-04-18-15-44-25](./Lab2_Virtual.assets/CentOS 7 64 位-2022-04-18-15-44-25.png)
+![CentOS 7 64 位-2022-04-18-15-44-25](./Lab2_Virtual.assets/2022-04-18-15-44-25.png)
 
 解决方案：su ！！！
 
