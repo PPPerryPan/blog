@@ -42,8 +42,8 @@ export default defineUserConfig({
     // },
     navbar: [
       { text: "主页", link: "/" },
-      { text: "分类", link: "/categories/jishuzatan/1.html" },
-      { text: "标签", link: "/tags/Debug/1.html" },
+      { text: "分类", link: "/categories/tech/1.html" },
+      { text: "标签", link: "/tags/AI/1.html" },
       // {
       //   text: "Docs",
       //   children: [
