@@ -1,0 +1,141 @@
+import{_ as s,c as i,b as a,o as e}from"./app-CUDFWA7u.js";const l="/blog/assets/3.1-CqoSL0ia.png",c={};function t(d,n){return e(),i("div",null,n[0]||(n[0]=[a('<h1 id="利用三层交换机实现vlan间路由" tabindex="-1"><a class="header-anchor" href="#利用三层交换机实现vlan间路由"><span>利用三层交换机实现VLAN间路由</span></a></h1><h2 id="例" tabindex="-1"><a class="header-anchor" href="#例"><span>例</span></a></h2><ul><li>背景</li></ul><p>​ 某企业有两个主要部门，技术部和销售部，分处于不同的办公室，为了安全和便于管理对两个部门的主机进行了VLAN的划分，技术部和销售部分处于不同的VLAN。现由于业务的需求需要销售部和技术部的主机能够相互访问，获得相应的资源，两个部门的交换机通过一台三层交换机进行了连接。</p><ul><li>原理</li></ul><p>​ 三层交换机具备网络层的功能，实现VLAN相互访问的原理是：利用三层交换机的路由功能，通过识别数据包的IP地址，查找路由表进行选路转发。三层交换机利用直连路由可以实现不同VLAN之间的互相访问。三层交换机给接口配置IP地址，采用SVI（交换虚拟接口）的方式实现VLAN间互连.SVI是指为交换机中的VLAN创建虚拟接口，并且配置IP地址。</p><h2 id="拓扑图与主机配置" tabindex="-1"><a class="header-anchor" href="#拓扑图与主机配置"><span>拓扑图与主机配置</span></a></h2><p><img src="'+l+`" alt="3.1"></p><h2 id="配置-双层交换机-2960" tabindex="-1"><a class="header-anchor" href="#配置-双层交换机-2960"><span>配置 双层交换机(2960)</span></a></h2><ul><li>划分VLAN</li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">Switch&gt;en										!特权模式</span>
+<span class="line">Switch#conf t									!全局配置</span>
+<span class="line">Enter configuration commands, one per line.  End with CNTL/Z.</span>
+<span class="line">Switch(config)#vlan 2							!划分vlan2</span>
+<span class="line">Switch(config-vlan)#exit</span>
+<span class="line">Switch(config)#vlan 3							!划分vlan3</span>
+<span class="line">Switch(config-vlan)#exit</span>
+<span class="line">Switch(config)#int fa 0/2						!配置0/2口</span>
+<span class="line">Switch(config-if)#switchport  access vlan 2		!划分到vlan2</span>
+<span class="line">Switch(config-if)#int fa 0/3					!配置0/3口</span>
+<span class="line">Switch(config-if)#sw</span>
+<span class="line">Switch(config-if)#switchport access vlan 3		!划分到vlan3</span>
+<span class="line">Switch(config-if)#int fa 0/1					!配置0/1口</span>
+<span class="line">Switch(config-if)#switchport mode trunk 		!切换工作模式</span>
+<span class="line"></span>
+<span class="line">Switch(config-if)#</span>
+<span class="line">%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down</span>
+<span class="line"></span>
+<span class="line">%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up</span>
+<span class="line"></span>
+<span class="line">! 查看Vlan表</span>
+<span class="line">Switch#show vlan</span>
+<span class="line"></span>
+<span class="line">VLAN Name                             Status    Ports</span>
+<span class="line">---- -------------------------------- --------- -------------------------------</span>
+<span class="line">1    default                          active    Fa0/4, Fa0/5, Fa0/6, Fa0/7</span>
+<span class="line">                                                Fa0/8, Fa0/9, Fa0/10, Fa0/11</span>
+<span class="line">                                                Fa0/12, Fa0/13, Fa0/14, Fa0/15</span>
+<span class="line">                                                Fa0/16, Fa0/17, Fa0/18, Fa0/19</span>
+<span class="line">                                                Fa0/20, Fa0/21, Fa0/22, Fa0/23</span>
+<span class="line">                                                Fa0/24, Gig0/1, Gig0/2</span>
+<span class="line">2    VLAN0002                         active    Fa0/2</span>
+<span class="line">3    VLAN0003                         active    Fa0/3</span>
+<span class="line">1002 fddi-default                     active    </span>
+<span class="line">1003 token-ring-default               active    </span>
+<span class="line">1004 fddinet-default                  active    </span>
+<span class="line">1005 trnet-default                    active    </span>
+<span class="line"></span>
+<span class="line">VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2</span>
+<span class="line">---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------</span>
+<span class="line">1    enet  100001     1500  -      -      -        -    -        0      0</span>
+<span class="line">2    enet  100002     1500  -      -      -        -    -        0      0</span>
+<span class="line">3    enet  100003     1500  -      -      -        -    -        0      0</span>
+<span class="line">1002 fddi  101002     1500  -      -      -        -    -        0      0   </span>
+<span class="line"> --More-- </span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="配置-三层交换机-3560" tabindex="-1"><a class="header-anchor" href="#配置-三层交换机-3560"><span>配置 三层交换机(3560)</span></a></h2><ul><li>划分VLAN</li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">Switch&gt;en					!权限模式</span>
+<span class="line">Switch#conf t				!全局配置</span>
+<span class="line">Enter configuration commands, one per line.  End with CNTL/Z.</span>
+<span class="line">Switch(config)#vlan 2		!划分vlan2</span>
+<span class="line">Switch(config-vlan)#exit</span>
+<span class="line">Switch(config)#vlan 3		!划分vlan3</span>
+<span class="line">Switch(config-vlan)#exit</span>
+<span class="line">Switch(config)#int fa 0/1	!配置f0/1口</span>
+<span class="line"></span>
+<span class="line">Switch(config-if)#switchport mode trunk </span>
+<span class="line">Command rejected: An interface whose trunk encapsulation is &quot;Auto&quot; can not be configured to &quot;trunk&quot; mode.</span>
+<span class="line">! 出现上述错误，先给端口封装dot1Q协议，再切换为trunk模式，命令如下</span>
+<span class="line">Switch(config-if)#switchport trunk encapsulation dot1q</span>
+<span class="line">! 或先转换为acc模式，再转为trunk模式，命令如下</span>
+<span class="line">Switch(config-if)#switchport mode access</span>
+<span class="line"></span>
+<span class="line">Switch(config-if)#switchport mode trunk</span>
+<span class="line">Switch(config-if)#exit</span>
+<span class="line">Switch(config)#ip routing	!启用交换机的路由功能</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>创建VLAN2、VLAN3的虚接口，配置其IP地址</li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">Switch(config)#int vlan 2</span>
+<span class="line">Switch(config-if)#ip address 192.168.1.1 255.255.255.0</span>
+<span class="line">Switch(config-if)#no shutdown</span>
+<span class="line">Switch(config-if)#exit</span>
+<span class="line">Switch(config)#int vlan 3</span>
+<span class="line">Switch(config-if)#ip address 192.168.2.1 255.255.255.0</span>
+<span class="line">Switch(config-if)#no shut</span>
+<span class="line">Switch(config-if)#exit</span>
+<span class="line">Switch(config)#end</span>
+<span class="line">Switch#</span>
+<span class="line">%SYS-5-CONFIG_I: Configured from console by console</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>查看路由表，可以看到两条直连线路</li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">Switch#show ip rou</span>
+<span class="line">Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP</span>
+<span class="line">       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area</span>
+<span class="line">       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2</span>
+<span class="line">       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP</span>
+<span class="line">       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area</span>
+<span class="line">       * - candidate default, U - per-user static route, o - ODR</span>
+<span class="line">       P - periodic downloaded static route</span>
+<span class="line"></span>
+<span class="line">Gateway of last resort is not set</span>
+<span class="line"></span>
+<span class="line">C    192.168.1.0/24 is directly connected, Vlan2</span>
+<span class="line">C    192.168.2.0/24 is directly connected, Vlan3</span>
+<span class="line"></span>
+<span class="line">Switch#</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>将f0/2划分到vlan2</li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">Switch(config)#int fa 0/2</span>
+<span class="line">Switch(config-if)#switchport access vlan 2</span>
+<span class="line">Switch(config-if)#exit</span>
+<span class="line">Switch(config)# end</span>
+<span class="line">Switch#show vlan</span>
+<span class="line"></span>
+<span class="line">VLAN Name                             Status    Ports</span>
+<span class="line">---- -------------------------------- --------- -------------------------------</span>
+<span class="line">1    default                          active    Fa0/3, Fa0/4, Fa0/5, Fa0/6</span>
+<span class="line">                                                Fa0/7, Fa0/8, Fa0/9, Fa0/10</span>
+<span class="line">                                                Fa0/11, Fa0/12, Fa0/13, Fa0/14</span>
+<span class="line">                                                Fa0/15, Fa0/16, Fa0/17, Fa0/18</span>
+<span class="line">                                                Fa0/19, Fa0/20, Fa0/21, Fa0/22</span>
+<span class="line">                                                Fa0/23, Fa0/24, Gig0/1, Gig0/2</span>
+<span class="line">2    VLAN0002                         active    Fa0/2</span>
+<span class="line">3    VLAN0003                         active    </span>
+<span class="line">1002 fddi-default                     active    </span>
+<span class="line">1003 token-ring-default               active    </span>
+<span class="line">1004 fddinet-default                  active    </span>
+<span class="line">1005 trnet-default                    active    </span>
+<span class="line"></span>
+<span class="line">VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2</span>
+<span class="line">---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------</span>
+<span class="line">1    enet  100001     1500  -      -      -        -    -        0      0</span>
+<span class="line">2    enet  100002     1500  -      -      -        -    -        0      0</span>
+<span class="line">3    enet  100003     1500  -      -      -        -    -        0      0</span>
+<span class="line">1002 fddi  101002     1500  -      -      -        -    -        0      0   </span>
+<span class="line"> --More-- </span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="测试" tabindex="-1"><a class="header-anchor" href="#测试"><span>测试</span></a></h2><ul><li>PC2 (192.168.1.3) 分别 ping PC0 (192.168.1.2)、PC1 (192.168.2.2)</li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre><code><span class="line">C:\\&gt;ping 192.168.1.2</span>
+<span class="line"></span>
+<span class="line">Pinging 192.168.1.2 with 32 bytes of data:</span>
+<span class="line"></span>
+<span class="line">Reply from 192.168.1.2: bytes=32 time&lt;1ms TTL=128</span>
+<span class="line"></span>
+<span class="line">Ping statistics for 192.168.1.2:</span>
+<span class="line">    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),</span>
+<span class="line">Approximate round trip times in milli-seconds:</span>
+<span class="line">    Minimum = 0ms, Maximum = 0ms, Average = 0ms</span>
+<span class="line"></span>
+<span class="line">C:\\&gt;ping 192.168.2.2</span>
+<span class="line"></span>
+<span class="line">Pinging 192.168.2.2 with 32 bytes of data:</span>
+<span class="line"></span>
+<span class="line">Reply from 192.168.2.2: bytes=32 time&lt;1ms TTL=127</span>
+<span class="line"></span>
+<span class="line">Ping statistics for 192.168.2.2:</span>
+<span class="line">    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),</span>
+<span class="line">Approximate round trip times in milli-seconds:</span>
+<span class="line">    Minimum = 0ms, Maximum = 0ms, Average = 0ms</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,23)]))}const v=s(c,[["render",t]]),r=JSON.parse('{"path":"/blogs/tech/networking/Cisco/Packet Tracer/Lab/3.html","title":"利用三层交换机实现VLAN间路由","lang":"en-US","frontmatter":{"title":"利用三层交换机实现VLAN间路由","date":"2022-01-31T00:00:00.000Z","tags":["Networking","Cisco"],"categories":["tech"]},"headers":[{"level":2,"title":"例","slug":"例","link":"#例","children":[]},{"level":2,"title":"拓扑图与主机配置","slug":"拓扑图与主机配置","link":"#拓扑图与主机配置","children":[]},{"level":2,"title":"配置 双层交换机(2960)","slug":"配置-双层交换机-2960","link":"#配置-双层交换机-2960","children":[]},{"level":2,"title":"配置 三层交换机(3560)","slug":"配置-三层交换机-3560","link":"#配置-三层交换机-3560","children":[]},{"level":2,"title":"测试","slug":"测试","link":"#测试","children":[]}],"git":{"createdTime":1748156404000,"updatedTime":1766826955000,"contributors":[{"name":"PPPerryPan","email":"perrypan0123@outlook.com","commits":1}]},"filePathRelative":"blogs/tech/networking/Cisco/Packet Tracer/Lab/3.md"}');export{v as comp,r as data};
