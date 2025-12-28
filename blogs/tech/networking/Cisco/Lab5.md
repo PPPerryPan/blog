@@ -1,4 +1,4 @@
-```
+﻿```
 title: 扩展 ACL
 date: 2022-05-23
 tags:
@@ -16,13 +16,13 @@ categories:
 
 参考拓扑：
 
-![image-20220523214457597](Lab5.assets/image-20220523214457597.png)
+![image-20220523214457597](./Lab5.assets/image-20220523214457597.png)
 
 
 
 实际拓扑（IP与上述保留一致）：
 
-![image-20220523214538635](Lab5.assets/image-20220523214538635.png)
+![image-20220523214538635](./Lab5.assets/image-20220523214538635.png)
 
 
 
@@ -107,7 +107,7 @@ R1(config-if)#
 
 1. 
 
-![image-20220523223208493](Lab5.assets/image-20220523223208493.png)
+![image-20220523223208493](./Lab5.assets/image-20220523223208493.png)
 
 
 
@@ -117,19 +117,19 @@ R1(config-if)#
 
 2. 
 
-![image-20220523223532645](Lab5.assets/image-20220523223532645.png)
+![image-20220523223532645](./Lab5.assets/image-20220523223532645.png)
 
 
 
 3. 
 
-![image-20220523231204833](Lab5.assets/image-20220523231204833.png)
+![image-20220523231204833](./Lab5.assets/image-20220523231204833.png)
 
 
 
 4. 
 
-![image-20220524102323143](Lab5.assets/image-20220524102323143.png)
+![image-20220524102323143](./Lab5.assets/image-20220524102323143.png)
 
 
 

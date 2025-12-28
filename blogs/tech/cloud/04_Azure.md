@@ -1,4 +1,4 @@
----
+﻿---
 title: Amazon 云服务分类
 date: 2022-03-07
 tags:
@@ -32,7 +32,7 @@ categories:
 
 ### 平台体系架构
 
-![image-20220316103954445](04_Azure.assets/image-20220316103954445.png)
+![image-20220316103954445](./04_Azure.assets/image-20220316103954445.png)
 
 ## 4.2 微软云操作系统Windows Azure
 
@@ -40,11 +40,11 @@ categories:
 
 #### 体系架构
 
-![image-20220316104337713](04_Azure.assets/image-20220316104337713.png)
+![image-20220316104337713](./04_Azure.assets/image-20220316104337713.png)
 
 ### 运行机制
 
-![image-20220316104534849](04_Azure.assets/image-20220316104534849.png)
+![image-20220316104534849](./04_Azure.assets/image-20220316104534849.png)
 
 ### 4.2.3 存储服务
 
@@ -58,11 +58,11 @@ categories:
 
 #### 体系架构
 
-![image-20220316105540713](04_Azure.assets/image-20220316105540713.png)
+![image-20220316105540713](./04_Azure.assets/image-20220316105540713.png)
 
 #### 层次结构
 
-![image-20220316105630708](04_Azure.assets/image-20220316105630708.png)
+![image-20220316105630708](./04_Azure.assets/image-20220316105630708.png)
 
 ## 4.3 微软云关系数据库 SQL Azure
 

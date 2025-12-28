@@ -1,4 +1,4 @@
-```
+﻿```
 title: 静态路由&动态路由
 date: 2022-05-19
 tags:
@@ -18,11 +18,11 @@ categories:
 
 例图：
 
-![image-20220509161738565](Lab4.assets/image-20220509161738565.png)
+![image-20220509161738565](./Lab4.assets/image-20220509161738565.png)
 
 实际图（除出入端口外，其他与例图一致）：
 
-![image-20220509161807071](Lab4.assets/image-20220509161807071.png)
+![image-20220509161807071](./Lab4.assets/image-20220509161807071.png)
 
 ### Switch0 配置
 
@@ -180,7 +180,7 @@ FastEthernet5/0        unassigned      YES unset  administratively down down
 
 填好对应IP后，PC间互ping：
 
-![image-20220509145445122](Lab4.assets/image-20220509145445122.png)
+![image-20220509145445122](./Lab4.assets/image-20220509145445122.png)
 
 ### Router4 配置
 
@@ -269,7 +269,7 @@ R5(config)#ip route 0.0.0.0 0.0.0.0 S2/0
 
 - Server0 IP 配置
 
-![image-20220509150556765](Lab4.assets/image-20220509150556765.png)
+![image-20220509150556765](./Lab4.assets/image-20220509150556765.png)
 
 ### Router6 配置
 
@@ -334,19 +334,19 @@ R7(config-router)#
 
 三台设备IP & 互ping
 
-![image-20220509172527117](Lab4.assets/image-20220509172527117.png)
+![image-20220509172527117](./Lab4.assets/image-20220509172527117.png)
 
 
 
 Server0 配置DNS
 
-![image-20220509172544360](Lab4.assets/image-20220509172544360.png)
+![image-20220509172544360](./Lab4.assets/image-20220509172544360.png)
 
 
 
 Server0 配置HTTP服务，并在PC0、Laptop0上分别以 IP 及 URL方式访问
 
-![image-20220509172735784](Lab4.assets/image-20220509172735784.png)
+![image-20220509172735784](./Lab4.assets/image-20220509172735784.png)
 
 
 

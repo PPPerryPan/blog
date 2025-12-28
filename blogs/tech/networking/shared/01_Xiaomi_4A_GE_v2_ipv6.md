@@ -1,4 +1,4 @@
----
+﻿---
 title: 小米路由器 4A 千兆版v2 (r4ag v2) 放通所有 IPv6 流量
 date: 2025-05-11
 tags:
@@ -38,13 +38,13 @@ GitHub： [LordPinhead/OpenWRTInvasion](https://github.com/LordPinhead/OpenWRTIn
 
 打开 `remote_command_execution_vulnerability.py`，把 Windows 检测的两行代码直接注释掉
 
-![image-20250608220943742](01_Xiaomi_4A_GE_v2_ipv6.assets/image-20250608220943742.png)
+![image-20250608220943742](./01_Xiaomi_4A_GE_v2_ipv6.assets/image-20250608220943742.png)
 
 
 
 找到变量 `router_password` 改成目前路由器的管理密码
 
-![image-20250608221044742](01_Xiaomi_4A_GE_v2_ipv6.assets/image-20250608221044742.png)
+![image-20250608221044742](./01_Xiaomi_4A_GE_v2_ipv6.assets/image-20250608221044742.png)
 
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Lab-Hadoop
 date: 2022-03-30
 tags:
@@ -23,15 +23,15 @@ categories:
 
 - 配置设备名
 
-![1_cMaster设备名](Lab1_Hadoop.assets/1_cMastername.png)
+![1_cMaster设备名](./Lab1_Hadoop.assets/1_cMastername.png)
 
 - 配置IP
 
-![2_cMaster配置IP](Lab1_Hadoop.assets/2_cMasterIP.png)
+![2_cMaster配置IP](./Lab1_Hadoop.assets/2_cMasterIP.png)
 
 - 配置hosts **（注：记得sudo；且三台机器都要配）**
 
-![3_cMaster配置hosts](Lab1_Hadoop.assets/3_cMasterhosts.png)
+![3_cMaster配置hosts](./Lab1_Hadoop.assets/3_cMasterhosts.png)
 
 
 
@@ -41,11 +41,11 @@ categories:
 
 - 给网卡生成新Mac地址以防出现冲突问题
 
-![5_cSlave1网卡生成新地址](Lab1_Hadoop.assets/5_cSlave1netcarnew.png)
+![5_cSlave1网卡生成新地址](./Lab1_Hadoop.assets/5_cSlave1netcarnew.png)
 
 - 配置IP
 
-![6_cMaster1配置IP](Lab1_Hadoop.assets/6_cMaster1-IP.png)
+![6_cMaster1配置IP](./Lab1_Hadoop.assets/6_cMaster1-IP.png)
 
 - cSlave1网络重连后，查看 cMaster 与 cSlave1 网络配置信息（IPv6暂不使用 实验过程不修，解决方案同理）
 
@@ -83,7 +83,7 @@ categories:
 
 - 配置IP
 
-![8_cMaster2配置IP](Lab1_Hadoop.assets/8_cMaster2IP.png)
+![8_cMaster2配置IP](./Lab1_Hadoop.assets/8_cMaster2IP.png)
 
 - 查看IP配置
 

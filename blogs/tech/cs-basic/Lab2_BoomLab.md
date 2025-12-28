@@ -50,13 +50,13 @@ categories:
 
   - 模式2：采用输入重定向。首先将答案文本写至一个.txt文本中，每个阶段的拆弹密码占一行。
 
-    ![B1](Lab2_BoomLab.asserts/B1.jpg)
+    ![B1](./Lab2_BoomLab.assets/B1.jpg)
 
   - 在调试程序时直接使用输入重定向指令，例如（假设密码已被写入到之前的拆弹密码文本文件solution.txt中）：./bomb < solution.txt
 
   - 通过执行以上指令即可直接根据屏幕输出来判断程序正确地进行了几个阶段或者在第几个阶段出现了错误。如果密码全部正确，提示结果如下图所示：
 
-![B2](Lab2_BoomLab.asserts/B2.png)
+![B2](./Lab2_BoomLab.assets/B2.png)
 
 ## 实验设备与软件环境
 
@@ -160,71 +160,71 @@ gdb bomb进入调试
 
 1. 使用gdb boom 进入gdb调试模式，并使用layout regs进入GUI模式
 
-![img](Lab2_BoomLab.asserts/B3.png)
+![img](./Lab2_BoomLab.assets/B3.png)
 
 2. 在Phase_1函数前打断点，并将程序跑起来
 
-![img](Lab2_BoomLab.asserts/B4.png)
+![img](./Lab2_BoomLab.assets/B4.png)
 
 3. 由下面的call… <strings_not_equal>猜出lea内藏有拆弹密码，尝试x/s注释内的内存地址，得出拆弹密码：Brownie, you are doing a heck of a job.
 
-![img](Lab2_BoomLab.asserts/B5.jpg)
+![img](./Lab2_BoomLab.assets/B5.jpg)
 
 ### Phase_2
 
 1. 反汇编Phase_2后，观察到call另一地址
 
-![img](Lab2_BoomLab.asserts/B6.png)
+![img](./Lab2_BoomLab.assets/B6.png)
 
 2. 同时，观察到对比的第一个数字为0，如果不为0，则call explode_bomb。
 
-![img](Lab2_BoomLab.asserts/B7.jpg)
+![img](./Lab2_BoomLab.assets/B7.jpg)
 
 3. 进入read_six_number后，观察到lea指令，查看0x5555554029a3的内容，对应0x555555401841处call指令，得到解除炸弹的密码为六个整数。
 
-![img](Lab2_BoomLab.asserts/B8.png)
+![img](./Lab2_BoomLab.assets/B8.png)
 
 4. 在<phase_2+30>位置打断点，并使用c指令让gdb运行至位于<phase_2+30>处断点，通过观察phase_2函数可知，第一个数字为0，第二个数字为1，其余四位为前两位相加。
 
-![img](Lab2_BoomLab.asserts/B9.jpg)
+![img](./Lab2_BoomLab.assets/B9.jpg)
 
 5. 组合后得到拆弹密码：0 1 1 2 3 5
 
-![image-20220205192543252](Lab2_BoomLab.asserts/B10.png)
+![image-20220205192543252](./Lab2_BoomLab.assets/B10.png)
 
 ### Phase_3
 
 1. 易知，解除炸弹的密码为两个整数
 
-![img](Lab2_BoomLab.asserts/B11.png)
+![img](./Lab2_BoomLab.assets/B11.png)
 
 2. 观察后猜出，解除炸弹的其中一个密码可能为：6 50。
 
-![img](Lab2_BoomLab.asserts/B12.png)
+![img](./Lab2_BoomLab.assets/B12.png)
 
 3. 尝试输入后，成功call phase_defused，Phase_3拆除成功。
 
-![img](Lab2_BoomLab.asserts/B13.png)
+![img](./Lab2_BoomLab.assets/B13.png)
 
 ### Phase_4
 
 1. 易知，拆弹密码为两个整数
 
-![4.1](Lab2_BoomLab.asserts/B14.png)
+![4.1](./Lab2_BoomLab.assets/B14.png)
 
 2. 观察汇编代码后，可得出：第一个数必定小于等于14，第二个整数必定为1
 
-![4.1](Lab2_BoomLab.asserts/B15.png)
+![4.1](./Lab2_BoomLab.assets/B15.png)
 
-![4.1](Lab2_BoomLab.asserts/B16.png)
+![4.1](./Lab2_BoomLab.assets/B16.png)
 
 3. 观察func4
 
-![4.1](Lab2_BoomLab.asserts/B17.png)
+![4.1](./Lab2_BoomLab.assets/B17.png)
 
 4. 尝试输入：11 1，成功call phase_defused，炸弹拆除成功。
 
-![4.1](Lab2_BoomLab.asserts/B18.png)
+![4.1](./Lab2_BoomLab.assets/B18.png)
 
 
 

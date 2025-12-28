@@ -1,4 +1,4 @@
----
+﻿---
 title: VTP+VLAN+TRUNK+CHANNEL实现小型局域网
 date: 2022-03-28
 tags:
@@ -60,11 +60,11 @@ Exiting....
 
 客户机会自动学习 vlan,最好使用 show vtp status 查看
 
-![image-20220328145107061](Lab2.assets/image-20220328145107061.png)
+![image-20220328145107061](./Lab2.assets/image-20220328145107061.png)
 
 改用G口
 
-![image-20220328145417019](Lab2.assets/image-20220328145417019.png)
+![image-20220328145417019](./Lab2.assets/image-20220328145417019.png)
 
 
 

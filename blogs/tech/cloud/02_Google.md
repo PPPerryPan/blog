@@ -1,4 +1,4 @@
----
+﻿---
 title: Google GFS
 date: 2022-03-07
 tags:
@@ -11,11 +11,11 @@ categories:
 
 ### 2.1.1 系统框架
 
-![image-20220307132620615](02_Google.assets/image-20220307132620615.png)
+![image-20220307132620615](./02_Google.assets/image-20220307132620615.png)
 
 #### 系统节点的角色
 
-![image-20220307132739614](02_Google.assets/image-20220307132739614.png)
+![image-20220307132739614](./02_Google.assets/image-20220307132739614.png)
 
 #### 实现机制
 
@@ -52,7 +52,7 @@ categories:
   - 当Master发生故障时，在磁盘数据保存完好的情况下，可以迅速恢复以上元数据
   - 为了防止Master彻底死机的情况，GFS还提供了Master远程的实时备份
 
-![image-20220307142503379](02_Google.assets/image-20220307142503379.png)
+![image-20220307142503379](./02_Google.assets/image-20220307142503379.png)
 
 #### Chunk Server容错
 
@@ -86,7 +86,7 @@ categories:
 
 ### 2.2.2 编程模型
 
-![image-20220308104437683](02_Google.assets/image-20220308104437683.png)
+![image-20220308104437683](./02_Google.assets/image-20220308104437683.png)
 
 - Map函数：对一部分原始数据进行指定的操作。
   - 每个Map操作都针对不同的原始数据，因此Map与Map之间是互相独立的，这使得它们可以充分并行化。
@@ -95,7 +95,7 @@ categories:
 
 #### 编程模型
 
-![image-20220308104641178](02_Google.assets/image-20220308104641178.png)
+![image-20220308104641178](./02_Google.assets/image-20220308104641178.png)
 
 **Map输入参数**：in_key和in_value，它指明了Map需要处理的原始数据 
 
@@ -109,7 +109,7 @@ categories:
 
 ### 2.2.3 实现机制
 
-![image-20220308104746485](02_Google.assets/image-20220308104746485.png)
+![image-20220308104746485](./02_Google.assets/image-20220308104746485.png)
 
 - MapReduce函数首先把**输入文件分成M块**
 - 分派的执行程序中有一个**主控程序Master**
@@ -133,15 +133,15 @@ categories:
 
 - 对原始的数据进行分割（Split），得到N个不同的数据分块 。
 
-  ![image-20220308105129674](02_Google.assets/image-20220308105129674.png)
+  ![image-20220308105129674](./02_Google.assets/image-20220308105129674.png)
 
 - 对每一个数据分块都启动一个Map进行处理。采用桶排序的方法，每个Map中按照首字母将字符串分配到26个不同的桶中。
 
-  ![image-20220308105215447](02_Google.assets/image-20220308105215447.png)
+  ![image-20220308105215447](./02_Google.assets/image-20220308105215447.png)
 
 - 对于Map之后得到的中间结果，启动26个Reduce。按照首字母将Map中不同桶中的字符串集合放置到相应的Reduce中进行处理。
 
-  ![image-20220308105250863](02_Google.assets/image-20220308105250863.png)
+  ![image-20220308105250863](./02_Google.assets/image-20220308105250863.png)
 
 ## 2.3 分布式锁服务Chubby
 
@@ -200,7 +200,7 @@ categories:
 
 #### Chubby的基本架构
 
-![image-20220308110714957](02_Google.assets/image-20220308110714957.png)
+![image-20220308110714957](./02_Google.assets/image-20220308110714957.png)
 
 - 客户端
   - 在客户这一端每个客户应用程序都有一个Chubby程序库（Chubby Library），客户端的所有应用都是通过调用这个库中的相关函数来完成的。
@@ -212,11 +212,11 @@ categories:
 
 - 副本结构
 
-  ![image-20220309103613765](02_Google.assets/image-20220309103613765.png)
+  ![image-20220309103613765](./02_Google.assets/image-20220309103613765.png)
 
 - 容错日志API
 
-  ![image-20220309103637537](02_Google.assets/image-20220309103637537.png)
+  ![image-20220309103637537](./02_Google.assets/image-20220309103637537.png)
 
 ### 2.3.4 Chubby文件系统
 
@@ -250,7 +250,7 @@ categories:
 
 - 客户端和主服务器之间的通信是通过KeepAlive握手协议来维持的，这一通信过程的 简单示意图 如下
 
-  ![image-20220309104753368](02_Google.assets/image-20220309104753368.png)
+  ![image-20220309104753368](./02_Google.assets/image-20220309104753368.png)
 
   - 客户端租约过期 
 
@@ -283,7 +283,7 @@ categories:
 
   - 采用的是ACL形式的安全保障措施。只要不被覆写，子节点都是直接继承父节点的ACL名
 
-    ![image-20220309135138431](02_Google.assets/image-20220309135138431.png)
+    ![image-20220309135138431](./02_Google.assets/image-20220309135138431.png)
 
     - 用户chinacloud提出向文件CLOUD中写入内容的请求。CLOUD首先读取自身的写ACL名fun，接着在fun中查到了chinacloud这一行记录，于是返回信息允许chinacloud对文件进行写操作，此时chinacloud才被允许向CLOUD写入内容。其他的操作和写操作类似。
 
@@ -300,7 +300,7 @@ categories:
 - Bigtable是一个分布式多维映射表，表中的数据通过一个行关键字（Row Key）、一个列关键字（Column Key）以及一个时间戳（Time Stamp）进行索引
 - Bigtable的存储逻辑可以表示为：``(row:string, column:string, time:int64)→string``
 
-![image-20220309135506332](02_Google.assets/image-20220309135506332.png)
+![image-20220309135506332](./02_Google.assets/image-20220309135506332.png)
 
 - 行
   -  Bigtable的行关键字可以是任意的字符串，但是大小不能够超过64KB。Bigtable和传统的关系型数据库有很大不同，它不支持一般意义上的事务，但能保证对于行的读写操作 具有原子性（Atomic）。表中数据都是根据行关键字进行排序的，排序使用的是词典序。 
@@ -317,7 +317,7 @@ categories:
 
 ### 2.4.3 系统架构
 
-![image-20220309141334693](02_Google.assets/image-20220309141334693.png)
+![image-20220309141334693](./02_Google.assets/image-20220309141334693.png)
 
 - 作用
 
@@ -346,9 +346,9 @@ categories:
 
 - SSTable是Google为Bigtable设计的内部数据存储格式。所有的SSTable文件都存储在GFS上，用户可以通过键来查询相应的值。
 
-![image-20220309141736041](02_Google.assets/image-20220309141736041.png)
+![image-20220309141736041](./02_Google.assets/image-20220309141736041.png)
 
-![image-20220309141804780](02_Google.assets/image-20220309141804780.png)
+![image-20220309141804780](./02_Google.assets/image-20220309141804780.png)
 
 - 不同子表的SSTable可以共享
 
@@ -362,15 +362,15 @@ categories:
 
 - Bigtable系统的内部采用的是一种类似B+树的三层查询体系
 
-  ![image-20220309141949461](02_Google.assets/image-20220309141949461.png)
+  ![image-20220309141949461](./02_Google.assets/image-20220309141949461.png)
 
 #### Bigtable 数据存储及读/写操作
 
-![image-20220309142425495](02_Google.assets/image-20220309142425495.png)
+![image-20220309142425495](./02_Google.assets/image-20220309142425495.png)
 
 #### **三种形式压缩之间的关系**
 
-![image-20220309142444490](02_Google.assets/image-20220309142444490.png)
+![image-20220309142444490](./02_Google.assets/image-20220309142444490.png)
 
 ### 2.4.6 性能优化
 
@@ -382,7 +382,7 @@ categories:
 
 - 对于一些较小的且会被经常读取的局部性群组，明显地改善读取效率。
 
-  ![image-20220309142601236](02_Google.assets/image-20220309142601236.png)
+  ![image-20220309142601236](./02_Google.assets/image-20220309142601236.png)
 
 #### 压缩
 

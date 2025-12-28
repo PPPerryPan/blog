@@ -1,4 +1,4 @@
----
+﻿---
 title: Cisco 交换机配置 SSH
 date: 2022-03-18
 tags:
@@ -20,11 +20,11 @@ categories:
 
 ## 配置主机IP
 
-![image-20220318143341513](Lab1.assets/image-20220318143341513.png)
+![image-20220318143341513](./Lab1.assets/image-20220318143341513.png)
 
 
 
-![image-20220318143320553](Lab1.assets/image-20220318143320553.png)
+![image-20220318143320553](./Lab1.assets/image-20220318143320553.png)
 
 ## Cisco交换机恢复出厂设置方法
 
@@ -69,7 +69,7 @@ Switch(config-line)#
 
 ### Telnet登录抓包测试
 
-![image-20220318141727778](Lab1.assets/image-20220318141727778.png)
+![image-20220318141727778](./Lab1.assets/image-20220318141727778.png)
 
 ## SSH配置
 
@@ -96,11 +96,11 @@ S1(config-line)#ip ssh version 2
 
 - --
 
-  ![image-20220318142410593](Lab1.assets/image-20220318142410593.png)
+  ![image-20220318142410593](./Lab1.assets/image-20220318142410593.png)
 
 ### SSH登录抓包测试
 
-![image-20220318144527343](Lab1.assets/image-20220318144527343.png)
+![image-20220318144527343](./Lab1.assets/image-20220318144527343.png)
 
 
 

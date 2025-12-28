@@ -1,4 +1,4 @@
-```
+﻿```
 title: VLAN 间路由
 date: 2022-04-15
 tags:
@@ -14,7 +14,7 @@ categories:
 
 ## 拓扑
 
-![image-20220415143408331](Lab3.assets/image-20220415143408331.png)
+![image-20220415143408331](./Lab3.assets/image-20220415143408331.png)
 
 ## 配置交换机
 
@@ -230,11 +230,11 @@ categories:
 
 - 为 PC0（位于VLAN10），PC2（位于VLAN20） 启用DHCP
 
-  ![image-20220415150017015](Lab3.assets/image-20220415150017015.png)
+  ![image-20220415150017015](./Lab3.assets/image-20220415150017015.png)
 
 - PC0, PC2互ping：
 
-  ![image-20220415150310091](Lab3.assets/image-20220415150310091.png)
+  ![image-20220415150310091](./Lab3.assets/image-20220415150310091.png)
 
 
 
