@@ -1,17 +1,12 @@
-﻿---
+---
 title: 华为 BFD 验证实验
 date: 2025-06-22
 tags:
-  - Networking
   - Huawei
+  - Networking
 categories:
   - tech
 ---
-
-
-
-
-
 ## 拓扑
 
 ![image-20250602211537608](./bfd.assets/image-20250602211537608-17488703087971.png)

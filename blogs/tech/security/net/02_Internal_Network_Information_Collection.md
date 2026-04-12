@@ -2,15 +2,11 @@
 title: 内网信息收集
 date: 2023-10-09
 tags:
-  - security
-  - networking
+  - Networking
+  - Security
 categories:
   - tech
-
 ---
-
-
-
 # 内网信息收集
 
 ## 收集本机信息

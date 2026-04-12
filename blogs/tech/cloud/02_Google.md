@@ -1,4 +1,4 @@
-﻿---
+---
 title: Google GFS
 date: 2022-03-07
 tags:
@@ -6,7 +6,6 @@ tags:
 categories:
   - tech
 ---
-
 ## 2.1 Google文件系统GFS
 
 ### 2.1.1 系统框架

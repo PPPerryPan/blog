@@ -6,7 +6,6 @@ tags:
 categories:
   - tech
 ---
-
 # OpenStack
 
 ## 前期部署

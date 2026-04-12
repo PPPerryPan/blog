@@ -1,4 +1,4 @@
-﻿---
+---
 title: Amazon 云服务分类
 date: 2022-03-07
 tags:
@@ -6,7 +6,6 @@ tags:
 categories:
   - tech
 ---
-
 # 微软云计算 Windows Azure
 
 ## 4.1 微软云计算平台

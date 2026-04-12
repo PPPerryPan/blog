@@ -2,12 +2,11 @@
 title: VSCode 配置集成终端为 GitBash
 date: 2022-07-06
 tags:
-  - progamming
   - Git
+  - Programming
 categories:
   - tech
 ---
-
 # VSCode 配置集成终端为 GitBash
 
 

@@ -2,12 +2,11 @@
 title: 常见攻击防御方法
 date: 2022-09-20
 tags:
-  - networking
-  - security
+  - Networking
+  - Security
 categories:
   - tech
 ---
-
 # 常见攻击防御方法
 
 ## SQL 注入

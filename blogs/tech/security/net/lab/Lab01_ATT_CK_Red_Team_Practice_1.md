@@ -2,12 +2,11 @@
 title: ATT&cK实战系列—红队实战(一)
 date: 2022-08-15
 tags:
-  - networking
-  - security
+  - Networking
+  - Security
 categories:
   - tech
 ---
-
 # ATT&cK实战系列—红队实战(一)
 
 参考链接：[漏洞详情 (qiyuanxuetang.net)](http://vulnstack.qiyuanxuetang.net/vuln/detail/2/)

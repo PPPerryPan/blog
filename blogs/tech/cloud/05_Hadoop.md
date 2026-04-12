@@ -1,4 +1,4 @@
-﻿---
+---
 title: Hadoop 2.0 主流开源云架构
 date: 2022-04-06
 tags:
@@ -6,7 +6,6 @@ tags:
 categories:
   - tech
 ---
-
 # Hadoop 2.0 主流开源云架构
 
 ## 5.1 引例

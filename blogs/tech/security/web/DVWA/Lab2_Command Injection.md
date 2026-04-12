@@ -2,12 +2,11 @@
 title: DVWA - Command Injection
 date: 2022-04-27
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: Command Injection
 
 ## Low

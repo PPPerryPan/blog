@@ -2,12 +2,11 @@
 title: DVWA - CSP Bypass
 date: 2022-08-28
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: CSP Bypass
 
 ## Low

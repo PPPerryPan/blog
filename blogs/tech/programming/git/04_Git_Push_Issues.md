@@ -6,7 +6,6 @@ tags:
 categories:
   - tech
 ---
-
 ## Connection reset by [IP] port 22
 
 1. 用手机热点

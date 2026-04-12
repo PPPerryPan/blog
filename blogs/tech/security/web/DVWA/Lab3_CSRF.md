@@ -2,12 +2,11 @@
 title: DVWA - CSRF
 date: 2022-05-05
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: CSRF
 
 理解CSRF攻击：攻击者盗用4你的身份，以你的名义发送恶意请求。

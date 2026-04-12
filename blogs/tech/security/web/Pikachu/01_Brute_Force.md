@@ -2,15 +2,11 @@
 title: PiKachu - 基于表单的暴力破解
 date: 2022-09-26
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
-
 ---
-
-
-
 ## 基于表单的暴力破解
 
 ### 分析

@@ -1,15 +1,12 @@
-﻿```
+---
 title: 静态路由&动态路由
 date: 2022-05-19
 tags:
-  - Networking
   - Cisco
+  - Networking
 categories:
   - tech
-```
-
-
-
+---
 # 静态路由+动态路由
 
 

@@ -2,12 +2,11 @@
 title: DVWA - SQL Injection
 date: 2022-05-26
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: SQL Injection
 
 ## Low

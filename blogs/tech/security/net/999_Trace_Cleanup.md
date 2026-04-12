@@ -2,14 +2,11 @@
 title: Windows 入侵痕迹清理
 date: 2022-09-14
 tags:
-  - security
-  - networking
+  - Networking
+  - Security
 categories:
   - tech
 ---
-
-
-
 # Windows 入侵痕迹清理
 
 ## Metasploit

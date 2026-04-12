@@ -2,14 +2,11 @@
 title: PiKachu - XSS
 date: 2022-09-27
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
-
-
 # XSS
 
 ## 反射型xss(get)

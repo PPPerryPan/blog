@@ -2,15 +2,10 @@
 title: iptables 快查
 date: 2024-01-11
 tags:
- - Linux
+  - Linux
 categories:
   - tech
 ---
-
-
-
-
-
 ## iptables 参数快查表
 
 ```bash

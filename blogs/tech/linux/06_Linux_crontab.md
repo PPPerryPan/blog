@@ -2,18 +2,10 @@
 title: Linux 计划任务 Crontab
 date: 2024-01-11
 tags:
- - Linux
+  - Linux
 categories:
   - tech
-
 ---
-
-
-
-
-
-
-
 在Ubuntu 20.04中，可以使用`cron`来配置计划任务。以下是一个简单的例子，演示如何配置一个每天定时执行的任务。
 
 1. **终端（Terminal）**。

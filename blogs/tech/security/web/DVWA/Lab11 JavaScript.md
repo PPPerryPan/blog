@@ -2,12 +2,11 @@
 title: DVWA - JavaScript
 date: 2022-08-29
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: JavaScript
 
 ## Low

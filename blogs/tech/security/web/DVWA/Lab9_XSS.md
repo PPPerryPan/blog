@@ -2,12 +2,11 @@
 title: DVWA - Weak Session IDs
 date: 2022-06-30
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: XSS
 
 ## DOM Based Cross Site Scripting (XSS)

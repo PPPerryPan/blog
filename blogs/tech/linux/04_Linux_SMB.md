@@ -2,13 +2,10 @@
 title: Linux 挂载 SMB
 date: 2024-02-16
 tags:
- - Linux
+  - Linux
 categories:
   - tech
 ---
-
-
-
 ## 挂载 SMB 目录
 
 要在Ubntu 20.04中挂载一个SMB（Server Message Block）共享目录，你需要使用`mount`命令，并且通常需要安装`smbclient`和`cifs-utils`包来支持SMB协议。以下是操作步骤：

@@ -6,7 +6,6 @@ tags:
 categories:
   - tech
 ---
-
 ## Ubuntu 22.04+ 新增网卡配置
 
 Ubuntu  2204 LTS 开始，新增了 `cloud-init` 的配置，

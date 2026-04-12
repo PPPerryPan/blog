@@ -2,12 +2,11 @@
 title: DVWA - Brute Force
 date: 2022-04-20
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: Brute Force
 
 ## **准备**

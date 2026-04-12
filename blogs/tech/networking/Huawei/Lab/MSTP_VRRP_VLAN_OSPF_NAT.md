@@ -1,15 +1,12 @@
-```
+---
 title: MSTP+VRRP+VLAN+OSPF+NAT 综合实验
 date: 2025-04-23
 tags:
-  - Networking
   - Huawei
+  - Networking
 categories:
   - tech
-```
-
-
-
+---
 ## 拓扑
 
 ![image-20250423205418090](./MSTP_VRRP_VLAN_OSPF_NAT.assets/image-20250423205418090.png)

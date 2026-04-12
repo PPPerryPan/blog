@@ -1,4 +1,4 @@
-﻿---
+---
 title: Lab-Hadoop
 date: 2022-03-30
 tags:
@@ -6,11 +6,6 @@ tags:
 categories:
   - tech
 ---
-
-
-
-
-
 ## 安装CentOS7
 
 略

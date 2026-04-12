@@ -2,12 +2,11 @@
 title: DVWA - Weak Session IDs
 date: 2022-08-25
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: Weak Session IDs
 
 ## Low

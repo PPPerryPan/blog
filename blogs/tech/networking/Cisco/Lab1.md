@@ -1,15 +1,12 @@
-﻿---
+---
 title: Cisco 交换机配置 SSH
 date: 2022-03-18
 tags:
-  - Networking
   - Cisco
+  - Networking
 categories:
   - tech
 ---
-
-
-
 # SSH配置
 
 - 工具

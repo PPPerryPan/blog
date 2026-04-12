@@ -1,15 +1,11 @@
-﻿---
+---
 title: Amazon 云服务分类
 date: 2022-03-07
 tags:
   - Cloud
 categories:
   - tech
-
 ---
-
-
-
 **Amazon 提供的服务**
 
 - 弹性计算云EC2

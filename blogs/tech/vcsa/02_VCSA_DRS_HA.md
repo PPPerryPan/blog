@@ -2,17 +2,12 @@
 title: VCSA DRS & HA
 date: 2025-12-13
 tags:
-  - VMware
   - ESXi
   - vCenter
+  - VMware
 categories:
   - tech
 ---
-
-
-
-
-
 ## Ⅰ 回顾
 
 01 末尾，我们提到 ESXi 加入 vCenter 之后自动创建了少量 vCLS 虚拟机，他们是什么用途的呢？

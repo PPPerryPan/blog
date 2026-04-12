@@ -7,11 +7,6 @@ tags:
 categories:
   - tech
 ---
-
-
-
-
-
 安装 Node.js
 
 ```

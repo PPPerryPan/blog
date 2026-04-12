@@ -2,12 +2,11 @@
 title: ATT&cK实战系列—红队实战(二)
 date: 2022-09-10
 tags:
-  - networking
-  - security
+  - Networking
+  - Security
 categories:
   - tech
 ---
-
 # ATT&cK实战系列—红队实战(二)
 
 ## 环境搭建

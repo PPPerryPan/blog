@@ -2,15 +2,11 @@
 title: 内网渗透测试基础
 date: 2023-10-09
 tags:
-  - security
-  - networking
+  - Networking
+  - Security
 categories:
   - tech
-
 ---
-
-
-
 # 1. 内网渗透测试基础
 
 ## 1.1 内网基础

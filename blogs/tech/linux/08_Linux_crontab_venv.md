@@ -2,16 +2,10 @@
 title: Linux 计划任务 Crontab 使用 Python 虚拟环境
 date: 2024-01-11
 tags:
- - Linux
+  - Linux
 categories:
   - tech
-
 ---
-
-
-
-
-
 在Linux上，如果你想通过计划任务（如 `cron`）来执行一个脚本，并且希望在虚拟环境中执行，你需要在 `cron` 任务中指定虚拟环境的激活过程。
 
 以下是一个步骤示例，展示如何设置一个 `cron` 任务来在虚拟环境中运行你的脚本：

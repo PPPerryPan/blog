@@ -2,16 +2,11 @@
 title: PiKachu - SQL Inject
 date: 2022-09-29
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
-
-
-
-
 # SQL Inject
 
 ## 数字型注入

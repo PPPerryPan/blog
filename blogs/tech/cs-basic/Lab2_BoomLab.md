@@ -2,12 +2,11 @@
 title: CSAPP：Bomb Lab 实验记录
 date: 2021-12-02
 tags:
-  - CSAPP
   - CS-Basics
+  - CSAPP
 categories:
   - tech
 ---
-
 # BinaryBomb
 
 ## 实验目的与要求

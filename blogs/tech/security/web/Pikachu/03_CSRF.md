@@ -2,14 +2,11 @@
 title: PiKachu - CSRF
 date: 2022-09-28
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
-
-
 ## CSRF(get) login
 
 ### 分析

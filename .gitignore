@@ -4,3 +4,7 @@
 node_modules
 .history
 .obsidian
+
+# 仅使用 pnpm，避免误提交 npm 锁文件
+package-lock.json
+scripts/

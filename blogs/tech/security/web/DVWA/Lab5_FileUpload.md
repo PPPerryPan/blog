@@ -2,8 +2,8 @@
 title: DVWA - File Upload
 date: 2022-05-20
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---

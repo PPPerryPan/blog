@@ -2,12 +2,11 @@
 title: DVWA - File Inclusion
 date: 2022-05-12
 tags:
+  - Security
   - Web
-  - security
 categories:
   - tech
 ---
-
 # DVWA: File Inclusion
 
 ## Low
