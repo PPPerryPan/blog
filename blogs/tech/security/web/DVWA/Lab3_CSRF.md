@@ -1,5 +1,5 @@
 ---
-title: DVWA - CSRF
+title: "DVWA: CSRF"
 date: 2022-05-05
 tags:
   - Security

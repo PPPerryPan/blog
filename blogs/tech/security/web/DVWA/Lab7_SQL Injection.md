@@ -1,5 +1,5 @@
 ---
-title: DVWA - SQL Injection
+title: "DVWA: SQL Injection"
 date: 2022-05-26
 tags:
   - Security

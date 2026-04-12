@@ -1,5 +1,5 @@
 ---
-title: DVWA - Weak Session IDs
+title: "DVWA: XSS"
 date: 2022-06-30
 tags:
   - Security

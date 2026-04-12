@@ -1,5 +1,5 @@
 ---
-title: Cisco 交换机配置 SSH
+title: Cisco 交换机 SSH 配置
 date: 2022-03-18
 tags:
   - Cisco
@@ -7,7 +7,7 @@ tags:
 categories:
   - tech
 ---
-# SSH配置
+# Cisco 交换机 SSH 配置
 
 - 工具
   - Xshell6

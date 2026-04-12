@@ -1,5 +1,5 @@
 ---
-title: DVWA - Weak Session IDs
+title: "DVWA: Weak Session IDs"
 date: 2022-08-25
 tags:
   - Security

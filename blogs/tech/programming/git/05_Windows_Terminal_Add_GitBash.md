@@ -1,14 +1,12 @@
 ---
-title: GitBash 连接 GitHub
+title: Windows Terminal 添加 Git Bash
 date: 2023-12-20
 tags:
   - Git
 categories:
   - tech
 ---
-## 
-
-# Windows Terminal 添加 GitBash.md
+# Windows Terminal 添加 Git Bash
 
 Windows Terminal 设置 Json 中加入
 

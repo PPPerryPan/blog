@@ -1,5 +1,5 @@
 ---
-title: PiKachu - CSRF
+title: Pikachu：CSRF
 date: 2022-09-28
 tags:
   - Security

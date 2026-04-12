@@ -1,5 +1,5 @@
 ---
-title: Lan-OpenStack
+title: OpenStack
 date: 2022-05-04
 tags:
   - Cloud

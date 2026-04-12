@@ -1,5 +1,5 @@
 ---
-title: Cisco 配置 NAT
+title: Cisco NAT 配置
 date: 2022-03-28
 tags:
   - Cisco
@@ -7,7 +7,7 @@ tags:
 categories:
   - tech
 ---
-# 练手
+# Cisco NAT 配置
 
 
 

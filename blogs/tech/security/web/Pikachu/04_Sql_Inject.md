@@ -1,5 +1,5 @@
 ---
-title: PiKachu - SQL Inject
+title: Pikachu：SQL Inject
 date: 2022-09-29
 tags:
   - Security
@@ -7,7 +7,7 @@ tags:
 categories:
   - tech
 ---
-# SQL Inject
+# Pikachu：SQL Inject
 
 ## 数字型注入
 

@@ -1,5 +1,5 @@
 ---
-title: DVWA - File Inclusion
+title: "DVWA: File Inclusion"
 date: 2022-05-12
 tags:
   - Security

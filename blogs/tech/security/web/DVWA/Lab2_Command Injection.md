@@ -1,5 +1,5 @@
 ---
-title: DVWA - Command Injection
+title: "DVWA: Command Injection"
 date: 2022-04-27
 tags:
   - Security

@@ -1,5 +1,5 @@
 ---
-title: 越南&日本地区 DNS 可用性测试
+title: 各地区 DNS 可用性测试
 date: 2025-04-10
 tags:
   - Networking

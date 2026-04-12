@@ -7,7 +7,7 @@ tags:
 categories:
   - tech
 ---
-## 小米路由器 4A 千兆版v2 (r4ag v2) 放通所有 IPv6 流量
+# 小米路由器 4A 千兆版v2 (r4ag v2) 放通所有 IPv6 流量
 
 **适用于**
 

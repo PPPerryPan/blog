@@ -1,5 +1,5 @@
 ---
-title: PiKachu - 基于表单的暴力破解
+title: Pikachu：基于表单的暴力破解
 date: 2022-09-26
 tags:
   - Security

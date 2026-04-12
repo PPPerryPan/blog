@@ -1,5 +1,5 @@
 ---
-title: PiKachu - XSS
+title: Pikachu：XSS
 date: 2022-09-27
 tags:
   - Security
@@ -7,7 +7,7 @@ tags:
 categories:
   - tech
 ---
-# XSS
+# Pikachu：XSS
 
 ## 反射型xss(get)
 

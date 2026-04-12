@@ -1,5 +1,5 @@
 ---
-title: DVWA - Insecure CAPTCHA
+title: "DVWA: Insecure CAPTCHA"
 date: 2022-08-21
 tags:
   - Security
@@ -7,7 +7,7 @@ tags:
 categories:
   - tech
 ---
-# DVWA: Insecure CAPTCHA.md
+# DVWA: Insecure CAPTCHA
 
 ## Low
 

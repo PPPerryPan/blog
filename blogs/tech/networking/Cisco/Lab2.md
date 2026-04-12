@@ -1,5 +1,5 @@
 ---
-title: VTP+VLAN+TRUNK+CHANNEL实现小型局域网
+title: 实验二、VTP+VLAN+TRUNK+CHANNEL实现小型局域网
 date: 2022-03-28
 tags:
   - Cisco

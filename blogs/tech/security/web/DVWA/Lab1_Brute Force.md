@@ -1,5 +1,5 @@
 ---
-title: DVWA - Brute Force
+title: "DVWA: Brute Force"
 date: 2022-04-20
 tags:
   - Security

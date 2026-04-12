@@ -1,5 +1,5 @@
 ---
-title: DVWA - CSP Bypass
+title: "DVWA: CSP Bypass"
 date: 2022-08-28
 tags:
   - Security

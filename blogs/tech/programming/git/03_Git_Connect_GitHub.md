@@ -1,11 +1,13 @@
 ---
-title: GitBash 连接 GitHub
+title: Git Bash 连接 GitHub
 date: 2019-09-15
 tags:
   - Git
 categories:
   - tech
 ---
+# Git Bash 连接 GitHub
+
 ## 本地配置
 
 1. 设置Email、userName
